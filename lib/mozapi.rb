@@ -15,6 +15,10 @@ class MozAPI
   include HTTParty
   base_uri 'http://lsapi.seomoz.com/linkscape'
   
+  # there is a global limit on the Mozscape API that only lets you 
+  # retrieve 100,000 links for any URL
+  GLOBAL_LIMIT = 100000
+  
   LIMIT = 100
   # URL + root_domain + page_authority + domain_authority
   DEFAULT_SOURCE_COLS = 4 + 16 + 34359738368 + 68719476736
