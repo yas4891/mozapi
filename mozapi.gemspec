@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'mozapi'
-  s.version     = '0.1.5'
+  s.version     = '0.1.6'
   s.date        = '2014-05-15'
   s.summary     = "A light-weight wrapper around the Mozscape API"
   s.description = "MozAPI is a light-weight wrapper for the MozscapeAPI (http://moz.com/products/api). It currently supports parts of the 'links' endpoint"
