@@ -25,6 +25,10 @@ class MozAPI
   
   
   URL                      = 4
+  # lt
+  ANCHOR_TEXT              = 4
+  # lnt
+  ANCHOR_TEXT_NORMALIZED   = 8
   ROOT_DOMAIN              = 16
   # uipl - not in the free version
   LINKING_ROOT_DOMAINS     = 1024
@@ -42,7 +46,7 @@ class MozAPI
   # URL + root_domain
   DEFAULT_TARGET_COLS      = URL + ROOT_DOMAIN
   # anchor_text
-  DEFAULT_LINK_COLS        = URL
+  DEFAULT_LINK_COLS        = ANCHOR_TEXT_NORMALIZED
   # linking root domains + links + DA
   DEFAULT_URL_METRICS_COLS = LINKING_ROOT_DOMAINS + 2048 + DOMAIN_AUTHORITY + LINKING_C_BLOCKS
   
