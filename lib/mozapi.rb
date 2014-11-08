@@ -51,14 +51,12 @@ class MozAPI
   DEFAULT_URL_METRICS_COLS = LINKING_ROOT_DOMAINS + 2048 + DOMAIN_AUTHORITY + LINKING_C_BLOCKS
   
   
-  def initialize
-    @api_id = ENV['MOZ_API_ID']
-    @api_key = ENV['MOZ_API_KEY']
+  def initialize(id, key)
+    @api_id = id
+    @api_key = key
   end
   
   def links(target_url, options)
-    sleep(10) # do this to honor the API rate limit
-    
     expires = expiration_time
     
     options = {
@@ -88,7 +86,6 @@ class MozAPI
   
   #
   def url_metrics(target_url, options = {})
-    sleep 10 
     
     expires = expiration_time
     
