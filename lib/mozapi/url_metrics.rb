@@ -6,7 +6,6 @@ require 'cgi'
 module MozAPI
   class URLMetrics < MozAPI::Base
     
-    debug_output $stdout 
     def get(target_url, options = {})
       expires = expiration_time
       
